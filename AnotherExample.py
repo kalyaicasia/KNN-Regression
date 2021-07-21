@@ -1,0 +1,28 @@
+#import the data using pandas
+import pandas as pd
+
+df = pd.read_table(r'\airfoil_self_noise.dat')
+print(df)
+p = df.iloc[:1400,-1:].values.tolist()       #targets where row = samples
+a = df.iloc[:1400, :-1].values.tolist()      #predictors where row = samples
+
+model = knn.knnreg("euclidean", "on")        #initialize model
+model.fit(a,p)                               #fit the model
+
+nd = df.iloc[-50:,:-1].values.tolist()       #the known data to predict with
+nt = df.iloc[-50:, -1:].values.tolist()      #the actual value
+
+#for example, a validation will be done using the last 50 samples of data from the dataset to find the best K value for the model
+#each accuracy of the output using the different values of K will be printed and compared
+
+irange = range(1,51)
+for i in irange:
+    pv = model.predict(i,nd)
+    [err,ac] = model.check(pv,nt)
+    print("K =", i)
+    print("Error =", err, "%")
+    print("Accurary =", ac, "%")
+    print("")
+    if ac > bestacc:
+        best = i
+        bestacc = ac
