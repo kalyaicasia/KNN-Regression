@@ -13,11 +13,11 @@ This KNN-Regression Model receives continuous numerical data as input to predict
 ## 1. Model Initialization 
 This model have multiple options to 
 1. Data Normalization
-* On (Default)
-* Off 
+   - On (Default)
+   - Off 
 2. Distance Calculation
-* Euclidean
-* Manhattan (Default)
+   - Euclidean
+   - Manhattan (Default)
 
 Model initialization accepts two argument as the model setting
 For example, if the desired model normalizes the input data before calculating the distance using the Manhattan Formula, then the model initialization can be written as
