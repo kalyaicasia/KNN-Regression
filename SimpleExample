@@ -1,0 +1,19 @@
+import knnreg as knn
+
+#example data input
+a = [[25,40], [35,60], [45,80], [20,20], [35,120], [52,18], [23, 95], [40,62], [60,100], [48,220], [33,150]]      #predictors
+p = [[135], [256], [231], [267], [139], [150], [127], [216], [139], [250], [264]]                                 #targets
+
+model = knn.knnreg()                  #initialization  
+
+model.fit(a,p)                        #fit the model
+
+k = 3                                 #if K = 3
+nd = [[48, 142],[25, 80]]             #if the model were to predict these two samples
+nt = [180, 216]                       #if the known actual values were
+
+pv = model.predict(k,nd)              #predict the model to get the predicted values
+
+[error, accuracy] = model.check(pv, nt)   #validate the predicte values
+print("Error =", error)
+print("Accuracy =", accuracy
