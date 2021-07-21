@@ -16,8 +16,8 @@ This model have multiple options to
    - On (Default)
    - Off 
 2. Distance Calculation
-   - Euclidean
-   - Manhattan (Default)
+   - Euclidean (Default)
+   - Manhattan 
 
 Model initialization accepts two argument as the model setting
 For example, if the desired model normalizes the input data before calculating the distance using the Manhattan Formula, then the model initialization can be written as
