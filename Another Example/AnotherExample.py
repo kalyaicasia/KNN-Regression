@@ -1,7 +1,7 @@
 #import the data using pandas
 import pandas as pd
 
-df = pd.read_table(r'\airfoil_self_noise.dat')
+df = pd.read_table(r'airfoil_self_noise.dat')
 print(df)
 p = df.iloc[:1400,-1:].values.tolist()       #targets where row = samples
 a = df.iloc[:1400, :-1].values.tolist()      #predictors where row = samples
