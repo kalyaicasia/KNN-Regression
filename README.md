@@ -3,13 +3,6 @@ KNN Regression Module (Python)
 
 This KNN-Regression Model receives continuous numerical data as input to predict a single target output using KNN algorithm.
 
-## Table of contents
-* [Model Initialization](#model-init)
-* [Model Fit](#fit)
-* [Model Predict](#predict)
-* [Model Check](#check)
-
-
 ## 1. Model Initialization 
 This model have multiple options to 
 1. Data Normalization
