@@ -9,7 +9,8 @@ This KNN-Regression Model receives continuous numerical data as input to predict
 * [Model Predict](#predict)
 * [Model Check](#check)
 
-## 1. Model Initialization (#model-init)
+
+## 1. Model Initialization 
 This model have multiple options to 
 * Data Normalization
 ** On (Default)
@@ -24,7 +25,8 @@ For example, if the desired model normalizes the input data before calculating t
 model = knn.knnreg("Manhattan", "On")
 ```
 
-## 2. Model Fit (#fit)
+
+## 2. Model Fit
 Accepts a list of predictors and target into the model, normalizes the data (according to the option during initialization). The model will automatically fit the input data. 
 The model accepts list as input, with each row referring to each sample. 
 ```
@@ -37,14 +39,16 @@ Accepted1 = [1, 2, 3, 4, 5]
 Accepted2 = [[1], [2], [3], [4], [5]]
 ```
 
-## 3. Model Predict (#predict)
+
+## 3. Model Predict 
 Predicts the output by calculating the distance between the input data and its neighbors. This function accepts the K value and the data to predict.
 ```
 pv = model.predict(k, nd)
 ```
 Where k is the K value, and nd is the input data used to predict. 
 
-## 4. Model Check (#check)
+
+## 4. Model Check 
 Calculates the error and accuracy of a predicted value for validation purposes. Accepts the predicted value and the actual value. 
 ```
 [error, accuracy] = model.check(pv, nt)
